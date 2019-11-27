@@ -75,6 +75,7 @@ public final class ApkChecker {
     }
 
     public static void main(String... args) {
+        args= new String[]{"--config", "/Users/yun.chen1.o/Documents/chenyun/学习/matrix/config.json"};
         if (args.length > 0) {
             ApkChecker m = new ApkChecker();
             m.run(args);

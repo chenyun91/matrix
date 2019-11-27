@@ -230,7 +230,7 @@ public final class ApkJob {
                 value = apkFile.getParentFile().getAbsolutePath() + File.separator + getApkRawName(apkFile.getName());
             }
             jobConfig.setOutputPath(value);
-
+            //以jar包的形式，转换输出结果的格式
             if (config.has(JobConstants.PARAM_FORMAT_JAR) && !Util.isNullOrNil(config.get(JobConstants.PARAM_FORMAT_JAR).getAsString())) {
                 value = config.get(JobConstants.PARAM_FORMAT_JAR).getAsString();
                 File file = new File(value);

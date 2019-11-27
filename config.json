@@ -1,0 +1,77 @@
+{
+  "--apk":"/Users/yun.chen1.o/Documents/chenyun/学习/matirx/venus.apk",
+  "--mappingTxt":"/Users/yun.chen1.o/Documents/chenyun/学习/matirx/mapping.txt",
+  "--output":"/Users/yun.chen1.o/Documents/chenyun/学习/matirx/apk-checker-result",
+  "--format":"mm.html,mm.json",
+  "--formatConfig":
+  [
+    {
+      "name":"-countMethod",
+      "group":
+      [
+        {
+          "name":"Android System",
+          "package":"android"
+        },
+        {
+          "name":"java system",
+          "package":"java"
+        },
+        {
+          "name":"com.nio.uc.venus.$",
+          "package":"com.nio.uc.venus.$"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "name":"-manifest"
+    },
+    {
+      "name":"-fileSize",
+      "--min":"10",
+      "--order":"desc",
+      "--suffix":"png, jpg, jpeg, gif, arsc"
+    },
+    {
+      "name":"-countMethod",
+      "--group":"package"
+    },
+    {
+      "name":"-checkResProguard"
+    },
+    {
+      "name":"-findNonAlphaPng",
+      "--min":"10"
+    },
+    {
+      "name":"-checkMultiLibrary"
+    },
+    {
+      "name":"-uncompressedFile",
+      "--suffix":"png, jpg, jpeg, gif, arsc"
+    },
+    {
+      "name":"-countR"
+    },
+    {
+      "name":"-duplicatedFile"
+    },
+    {
+      "name":"-unusedResources",
+      "--rTxt":"/Users/yun.chen1.o/Documents/chenyun/学习/R.txt",
+      "--ignoreResources"
+      :["R.raw.*",
+        "R.style.*",
+        "R.attr.*",
+        "R.id.*",
+        "R.string.ignore_*"
+      ]
+    },
+    {
+      "name":"-unusedAssets",
+      "--ignoreAssets":["*.so" ]
+    }
+  ]
+}
